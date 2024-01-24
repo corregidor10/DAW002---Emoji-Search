@@ -1,15 +1,23 @@
-import React, { FC, ChangeEvent } from 'react';
+import { ChangeEvent, FC, useEffect, useState } from 'react';
 
 import './SearchInput.css';
+import useDebounce from '../hooks/useDebounce';
 
 interface SearchInputProps {
-    textChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    textChange: (text: string) => void;
 }
 
 const SearchInput: FC<SearchInputProps> = ({ textChange }) => {
+    const [inputValue, setInputValue] = useState('');
+    const debouncedInputValue = useDebounce(inputValue, 500);
+
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        textChange(event);
+        setInputValue(event.target.value);
     };
+
+    useEffect(() => {
+        textChange(debouncedInputValue);
+    }, [debouncedInputValue, textChange]);
 
     return (
         <div className="component-search-input">

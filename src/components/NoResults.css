@@ -1,0 +1,7 @@
+.component-no-results {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px;
+    color: #999;
+    text-transform: uppercase;
+}

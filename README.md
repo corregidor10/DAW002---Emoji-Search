@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+# Emoji Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de busqueda de emojis utilizando la api gratuita de API NINJA
 
-Currently, two official plugins are available:
+## Cómo levantar el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clona el repositorio en tu máquina local usando `git clone <url_del_repositorio>`.
 
-## Expanding the ESLint configuration
+2. Navega hasta el directorio del proyecto usando `cd <nombre_del_directorio>`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Instala las dependencias del proyecto usando `npm install`.
 
-- Configure the top-level `parserOptions` property like this:
+4. Inicia el servidor de desarrollo usando `npm run dev`. La aplicación debería estar disponible en `http://localhost:5173`.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Ejercicio
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Ver un custom hook en acción, diferencias y facilidad de uso
+
+2. Crear un componente para cuando no hay elementos
+
+3. Intentar cambiar de api a ver que sucede Variables de entorno
+
+4. Renderizar un componente u otro en función del estado
+
+5. Meter un loading con una variable de estado en la llamada a la API y reutilizar el componente del ejercicio anterior, primero crear un loading dummy con un div loading.... y luego como segundo paso, importar el del otro ejercicio
