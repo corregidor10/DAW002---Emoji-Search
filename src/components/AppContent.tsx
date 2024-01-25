@@ -4,10 +4,9 @@ import { EmojiData } from '../model/IEmojiData';
 import { IPaginatedFilter, emptyPaginatedFilter } from '../model/IPaginatedFilter';
 import { IPaginatedResponse, emptyPaginatedResponse } from '../model/IPaginatedResponse';
 import './AppContent.css';
-import EmojiResults from './results/EmojiResults';
 import { Paginator } from './filter/Paginator';
 import SearchInput from './filter/SearchInput';
-import CustomSpinner from './common/spinner';
+import EmojiResults from './results/EmojiResults';
 
 const AppContent: React.FC = () => {
     const [paginatedEmojiResponse, setPaginatedEmojiResponse] = useState<IPaginatedResponse<EmojiData>>(emptyPaginatedResponse());
@@ -54,8 +53,7 @@ const AppContent: React.FC = () => {
                 <SearchInput textChange={handleSearchChange} />
                 {showPaginator && <Paginator onPrevClick={onPrevClick} onNextClick={onNextClick} paginatedResult={paginatedEmojiResponse} />}
             </div>
-            {!loading && <EmojiResults emojiData={paginatedEmojiResponse.data} />}
-            {loading && <CustomSpinner />}
+            <EmojiResults emojiData={paginatedEmojiResponse.data} />
         </div>
     );
 };
