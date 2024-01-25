@@ -1,8 +1,28 @@
 .app_content {
     padding: 32px;
-    margin-top: 80px;
+    position: fixed;
+    top: 80px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-y: auto;
+    height: calc(100vh - 80px); /* Añade esta línea */
+    overflow-y: hidden;
+}
+.app_filter {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: 64px;
+    border-bottom: 1px solid #ccc;
+    height: 100px;
+}
+@media screen and (max-width: 768px) {
+    .app_filter {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 16px;
+        height: auto;
+        padding: 16px;
+    }
 }

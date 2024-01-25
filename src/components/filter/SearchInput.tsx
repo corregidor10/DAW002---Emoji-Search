@@ -1,7 +1,7 @@
 import { ChangeEvent, FC, useEffect, useState } from 'react';
 
 import './SearchInput.css';
-import useDebounce from '../hooks/useDebounce';
+import useDebounce from '../../hooks/useDebounce';
 
 interface SearchInputProps {
     textChange: (text: string) => void;

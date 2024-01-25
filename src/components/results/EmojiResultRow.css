@@ -8,7 +8,9 @@
 }
 
 .component-emoji-result-row:hover {
-    background-color: #eee;
+    background-color: lightpink;
+    color: darkorchid;
+    font-weight: 800;
 }
 
 .component-emoji-result-row img {
@@ -33,4 +35,6 @@
 
 .component-emoji-result-row:hover .info {
     display: inline-block;
+    font-weight: 600;
+    color: darkgrey;
 }

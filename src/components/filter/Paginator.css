@@ -1,0 +1,26 @@
+.paginator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    column-gap: 16px;
+    font-weight: 600;
+    color: darkgrey;
+}
+
+.paginator-container button {
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    outline: none;
+}
+.paginator-container button:hover {
+    background-color: lightpink;
+}
+.paginator-container button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}

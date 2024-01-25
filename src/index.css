@@ -12,6 +12,8 @@ body {
     display: flex;
     min-width: 1024px;
     min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
