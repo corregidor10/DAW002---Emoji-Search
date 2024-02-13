@@ -6,7 +6,7 @@ import EmojiResultRow from './EmojiResultRow';
 import './EmojiResults.css';
 
 interface EmojiResultsProps {
-    emojiData: Array<EmojiData>;
+    emojiData: EmojiData[];
 }
 
 const EmojiResults: FC<EmojiResultsProps> = ({ emojiData }) => {
@@ -22,9 +22,7 @@ const EmojiResults: FC<EmojiResultsProps> = ({ emojiData }) => {
 
     return (
         <div className="component-emoji-results">
-            {emojiData.map((emoji: EmojiData) => (
-                <EmojiResultRow key={emoji.code} emoji={emoji} />
-            ))}
+            {emojiData.length > 0 && emojiData?.map((emoji: EmojiData) => <EmojiResultRow key={emoji.code} emoji={emoji} />)}
         </div>
     );
 };
